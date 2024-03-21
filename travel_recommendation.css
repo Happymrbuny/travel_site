@@ -65,9 +65,7 @@ nav ul input {
     border: none;
     background-color: var(--light-text-color);
     height: 3rem;
-    /* width: 28rem; */
     font-size: 1.8rem;
-    flex: 1 1; /* maybenot */
 }
 
 nav a {
@@ -90,9 +88,7 @@ nav a {
     padding: 1rem 1rem;
     border-radius: 2rem;
     height: 4rem;
-}
-
-.recSearch input {
+    margin-right: 1rem;
 }
 
 /* Social Links */
@@ -159,6 +155,7 @@ nav a {
     margin-bottom: 4rem;
     width: fit-content;
     backdrop-filter: var(--backdrop);
+    white-space: nowrap;
 }
 
 .about p {
@@ -173,7 +170,6 @@ nav a {
     width: 80%;
     margin-left: 2rem;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap: 8rem;
 }
@@ -278,7 +274,7 @@ nav a {
 }
 
 /* Nav Media Query */
-@media (max-width: 1300px) {
+@media (max-width: 1375px) {
     .recSearch {
         display: grid;
         grid-template-rows: 1fr 1fr;
@@ -318,5 +314,9 @@ nav a {
     }
     .socialLinks {
         display: block;
+    }
+
+    .team {
+        flex-direction: column;
     }
 }
