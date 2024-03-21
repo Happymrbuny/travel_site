@@ -47,6 +47,7 @@ btnSearch.addEventListener('click', searchRecommendations);
 
 function clearResults() {
     resultDiv.innerHTML = '';
+    recommendations.value = '';
 }
 
 btnReset.addEventListener('click', clearResults);
