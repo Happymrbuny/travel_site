@@ -40,6 +40,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     height: 8rem;
+    width: 100vw;
     font-size: 2rem;
 }
 nav ul {
@@ -63,12 +64,17 @@ nav ul button {
 nav ul input {
     border: none;
     background-color: var(--light-text-color);
+    height: 3rem;
+    /* width: 28rem; */
+    font-size: 1.8rem;
+    flex: 1 1; /* maybenot */
 }
 
 nav a {
     text-decoration: none;
     color: var(--light-text-color);
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .siteName {
@@ -87,9 +93,6 @@ nav a {
 }
 
 .recSearch input {
-    height: 3rem;
-    width: 28rem;
-    font-size: 1.8rem;
 }
 
 /* Social Links */
@@ -131,6 +134,7 @@ nav a {
     font-size: var(--primary-heading);
     padding: var(--backdrop-pad);
     margin-bottom: 2rem;
+    width: fit-content;
     backdrop-filter: var(--backdrop);
 }
 
@@ -169,6 +173,7 @@ nav a {
     width: 80%;
     margin-left: 2rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 8rem;
 }
@@ -178,7 +183,6 @@ nav a {
 }
 
 .teamMember {
-    margin-right: 8rem;
     padding: var(--backdrop-pad);
     backdrop-filter: var(--backdrop);
 }
@@ -204,7 +208,7 @@ nav a {
 /* Contact Page */
 
 .contact {
-    width: 100%;
+    width: 90%;
     margin: 20rem 6rem 8rem 6rem;
     color: var(--light-text-color);
     display: flex;
@@ -271,4 +275,48 @@ nav a {
 .outputDiv p {
     padding: 1rem;
     font-size: 2.4rem;
+}
+
+/* Nav Media Query */
+@media (max-width: 1300px) {
+    .recSearch {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        height: 9rem;
+    }
+
+    .recSearch input {
+        justify-self: start;
+    }
+    nav {
+        height: 12rem;
+    }
+    nav ul button {
+        margin-block: 0.5rem;
+    }
+
+    .home,
+    .about {
+        margin-top: 2rem;
+    }
+
+    .contact {
+        margin-top: 2rem;
+        display: block;
+    }
+
+    .vr {
+        display: none;
+    }
+
+    .main {
+        display: block;
+    }
+
+    .social {
+        margin-top: 2rem;
+    }
+    .socialLinks {
+        display: block;
+    }
 }
