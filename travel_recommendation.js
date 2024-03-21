@@ -19,8 +19,17 @@ function searchRecommendations() {
     fetch('travel_recommendation_api.json')
         .then((response) => response.json())
         .then((data) => {
-            const destinations = data[`${searchParam}`];
+            let destinations = null;
+            if (searchParam === 'countries') {
+                destinations =
+                    data.countries[
+                        `${Math.floor(Math.random() * data.countries.length)}`
+                    ].cities;
+            } else {
+                destinations = data[`${searchParam}`];
+            }
             if (destinations) {
+                console.log(destinations);
                 let destinationDetails = '';
                 destinations.forEach((destination) => {
                     destinationDetails = `  <div class='outputDiv'>
