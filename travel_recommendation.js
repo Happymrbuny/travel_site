@@ -1,12 +1,11 @@
 const btnSearch = document.getElementById('btnSearch');
 const btnReset = document.getElementById('btnReset');
 const resultDiv = document.querySelector('.resultDiv');
+const recommendations = document.getElementById('recommendations');
 
 function searchRecommendations() {
     resultDiv.innerHTML = '';
-    const input = document
-        .getElementById('recommendations')
-        .value.toLowerCase();
+    const input = recommendations.value.toLowerCase();
     let searchParam = '';
     if (input === 'beach' || input === 'beaches') {
         searchParam = 'beaches';
@@ -45,3 +44,9 @@ function searchRecommendations() {
 }
 
 btnSearch.addEventListener('click', searchRecommendations);
+
+function clearResults() {
+    resultDiv.innerHTML = '';
+}
+
+btnReset.addEventListener('click', clearResults);
