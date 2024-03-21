@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* Colors */
+    --light-text-color: #ddd;
+    --blue-accent: #4055dd;
+    /* Font size */
+    --primary-heading: 8.2rem;
+    /* Spacing */
+    --backdrop-pad: 0.5rem 1.5rem;
+    /* Misc */
+    --backdrop: brightness(85%) blur(0.5rem);
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     background: linear-gradient(to right, #00000050, #00000000),
         url('./img/beach.jpg');
@@ -18,65 +34,73 @@ body {
 
 nav {
     background: linear-gradient(to right, #000060, #555);
-    padding: 0 20px;
+    padding: 0 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    height: 8rem;
+    font-size: 2rem;
 }
 nav ul {
     list-style-type: none;
-    padding: 5px 0;
+    padding: 0.5rem 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 1rem;
 }
 nav ul button {
-    background-color: #4055dd;
-    color: #ddd;
+    background-color: var(--blue-accent);
+    color: var(--light-text-color);
     border: none;
-    padding: 5px 10px;
-    border-radius: 20px;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
     align-self: end;
 }
 
 nav ul input {
     border: none;
-    background-color: #ddd;
+    background-color: var(--light-text-color);
 }
 
 nav a {
     text-decoration: none;
-    color: #ddd;
+    color: var(--light-text-color);
     font-weight: bold;
 }
 
 .siteName {
     font-weight: bold;
-    color: #ddd;
+    color: var(--light-text-color);
 }
 
 .recSearch {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #ddd;
-    padding: 5px 10px;
-    border-radius: 20px;
+    background-color: var(--light-text-color);
+    padding: 1rem 1rem;
+    border-radius: 2rem;
+    height: 4rem;
+}
+
+.recSearch input {
+    height: 3rem;
+    width: 28rem;
+    font-size: 1.8rem;
 }
 
 /* Social Links */
 
 .social {
-    margin-top: 80px;
-    margin-left: 40px;
+    margin-top: 14rem;
+    margin-left: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 8rem;
 }
 
 .socialLinks {
@@ -85,134 +109,166 @@ nav a {
 }
 
 .socialLink {
-    color: #ddd;
-    font-size: 24px;
-    margin-bottom: 15px;
+    color: var(--light-text-color);
+    font-size: 3.6rem;
+    margin-bottom: 1.5rem;
 }
 
 .vr {
-    border: solid 1px #ddd;
+    border: solid 1px var(--light-text-color);
     width: 1px;
-    height: 200px;
+    height: 20rem;
 }
 
 /* Home Page */
 
 .home {
-    margin: 120px 0 10px 60px;
-    color: #ddd;
+    margin: 12rem 0 1rem 12rem;
+    color: var(--light-text-color);
 }
 
 .home h1 {
-    font-size: 64px;
+    font-size: var(--primary-heading);
+    padding: var(--backdrop-pad);
+    margin-bottom: 2rem;
+    backdrop-filter: var(--backdrop);
 }
 
 .home p {
-    font-size: 24px;
-    width: 300px;
+    font-size: 3.6rem;
+    width: 60rem;
+    backdrop-filter: var(--backdrop);
+    padding: var(--backdrop-pad);
+    margin-bottom: 2rem;
 }
 
 /* About Page */
 
 .about {
-    margin: 80px 0 10px 60px;
-    color: #fff;
+    margin: 12rem 0 1rem 12rem;
+    color: var(--light-text-color);
 }
 
 .about h1 {
-    font-size: 64px;
-    margin-bottom: 40px;
+    font-size: var(--primary-heading);
+    padding: var(--backdrop-pad);
+    margin-bottom: 4rem;
+    width: fit-content;
+    backdrop-filter: var(--backdrop);
 }
 
 .about p {
-    font-size: 24px;
-    margin-bottom: 40px;
+    font-size: 2.8rem;
+    margin-bottom: 4rem;
+    padding: var(--backdrop-pad);
     width: 80%;
+    backdrop-filter: var(--backdrop);
 }
 
 .team {
     width: 80%;
-    margin-left: 40px;
+    margin-left: 2rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 8rem;
 }
 
 .team h2 {
-    font-size: 32px;
+    font-size: 4.8rem;
+}
+
+.teamMember {
+    margin-right: 8rem;
+    padding: var(--backdrop-pad);
+    backdrop-filter: var(--backdrop);
 }
 
 .teamMember h4 {
-    font-size: 24px;
+    font-size: 2.4rem;
+    text-align: center;
 }
 
 .teamMember p {
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 .teamMember div {
-    background-color: #4055dd;
-    padding: 5px;
-    border-radius: 24px;
+    background-color: var(--blue-accent);
+    padding: 0.5rem;
+    border-radius: 2.4rem;
     text-align: center;
+    font-size: 1.8rem;
 }
 
 /* Contact Page */
 
 .contact {
     width: 100%;
-    margin: 200px 60px 80px 60px;
-    color: #fff;
+    margin: 20rem 6rem 8rem 6rem;
+    color: var(--light-text-color);
     display: flex;
     justify-content: space-between;
-    gap: 120px;
+    gap: 12rem;
 }
 
 .contact h1 {
-    margin-top: 40px;
-    font-size: 64px;
+    margin-top: 4rem;
+    font-size: var(--primary-heading);
+    backdrop-filter: var(--backdrop);
+    padding: var(--backdrop-pad);
+    height: fit-content;
 }
 
 .contact form {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    font-size: 2.4rem;
+    backdrop-filter: var(--backdrop);
 }
 
 .contact form input,
 .contact form textarea {
     opacity: 0.5;
+    font-size: 2.4rem;
 }
 
 .contact button {
-    background-color: #4055dd;
+    background-color: var(--blue-accent);
     text-align: center;
-    margin-top: 10px;
-    border-radius: 24px;
+    margin-top: 1rem;
+    border-radius: 2.4rem;
     border: none;
-    color: #fff;
+    color: var(--light-text-color);
+    font-size: 2.4rem;
 }
 
 /* Search Results */
 .resultDiv {
-    margin: 20px 20px 0 80px;
-    width: 400px;
+    margin: 2rem 2rem 0 8rem;
+    width: 40rem;
+    margin-left: 40rem;
 }
 
 .outputDiv {
-    margin-bottom: 40px;
-    background-color: #ddd;
-    border-radius: 20px;
+    margin-bottom: 4rem;
+    background-color: var(--light-text-color);
+    border-radius: 2rem;
 }
 
 .resultImg {
-    height: 400px;
-    width: 400px;
-    border-radius: 20px 20px 0 0;
+    height: 40rem;
+    width: 40rem;
+    border-radius: 2rem 2rem 0 0;
 }
 
-.outputDiv p,
 .outputDiv h2 {
-    padding: 10px;
+    padding: 1rem;
+    font-size: 3.2rem;
+}
+
+.outputDiv p {
+    padding: 1rem;
+    font-size: 2.4rem;
 }
