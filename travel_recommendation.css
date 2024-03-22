@@ -94,7 +94,7 @@ nav a {
 /* Social Links */
 
 .social {
-    margin-top: 14rem;
+    margin-top: 8rem;
     margin-left: 4rem;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@ nav a {
 /* Home Page */
 
 .home {
-    margin: 12rem 0 1rem 12rem;
+    margin: 6rem 0 1rem 12rem;
     color: var(--light-text-color);
 }
 
@@ -145,7 +145,7 @@ nav a {
 /* About Page */
 
 .about {
-    margin: 12rem 0 1rem 12rem;
+    margin: 6rem 0 1rem 12rem;
     color: var(--light-text-color);
 }
 
@@ -205,7 +205,7 @@ nav a {
 
 .contact {
     width: 90%;
-    margin: 20rem 6rem 8rem 6rem;
+    margin: 0rem 6rem 8rem 6rem;
     color: var(--light-text-color);
     display: flex;
     justify-content: space-between;
@@ -213,7 +213,7 @@ nav a {
 }
 
 .contact h1 {
-    margin-top: 4rem;
+    margin-top: 20rem;
     font-size: var(--primary-heading);
     backdrop-filter: var(--backdrop);
     padding: var(--backdrop-pad);
@@ -221,6 +221,7 @@ nav a {
 }
 
 .contact form {
+    margin-top: 6rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
