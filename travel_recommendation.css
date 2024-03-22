@@ -9,7 +9,8 @@
     --light-text-color: #ddd;
     --blue-accent: #4055dd;
     /* Font size */
-    --primary-heading: 8.2rem;
+    --primary-heading: 6.4rem;
+    --para-text: 2.8rem;
     /* Spacing */
     --backdrop-pad: 0.5rem 1.5rem;
     /* Misc */
@@ -95,7 +96,7 @@ nav a {
 
 .social {
     margin-top: 8rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -122,7 +123,7 @@ nav a {
 /* Home Page */
 
 .home {
-    margin: 6rem 0 1rem 12rem;
+    margin: 4rem 0 1rem 12rem;
     color: var(--light-text-color);
 }
 
@@ -135,7 +136,7 @@ nav a {
 }
 
 .home p {
-    font-size: 3.6rem;
+    font-size: var(--para-text);
     width: 60rem;
     backdrop-filter: var(--backdrop);
     padding: var(--backdrop-pad);
@@ -159,7 +160,7 @@ nav a {
 }
 
 .about p {
-    font-size: 2.8rem;
+    font-size: var(--para-text);
     margin-bottom: 4rem;
     padding: var(--backdrop-pad);
     width: 80%;
@@ -221,11 +222,14 @@ nav a {
 }
 
 .contact form {
-    margin-top: 6rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    font-size: 2.4rem;
+    font-size: var(--para-text);
+}
+
+.contact form label {
     backdrop-filter: var(--backdrop);
 }
 
@@ -249,7 +253,7 @@ nav a {
 .resultDiv {
     margin: 2rem 2rem 0 8rem;
     width: 40rem;
-    margin-left: 40rem;
+    margin-left: 4rem;
 }
 
 .outputDiv {
@@ -300,6 +304,10 @@ nav a {
     .contact {
         margin-top: 2rem;
         display: block;
+    }
+
+    .contact h1 {
+        margin-top: 2rem;
     }
 
     .vr {
